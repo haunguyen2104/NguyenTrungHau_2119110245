@@ -34,12 +34,12 @@ namespace Cau1
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbID = new System.Windows.Forms.TextBox();
+            this.tbName = new System.Windows.Forms.TextBox();
+            this.dtDateBirth = new System.Windows.Forms.DateTimePicker();
+            this.ckbGender = new System.Windows.Forms.CheckBox();
+            this.cbDepartment = new System.Windows.Forms.ComboBox();
+            this.tbPlaceBirth = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -104,58 +104,58 @@ namespace Cau1
             this.label5.TabIndex = 0;
             this.label5.Text = "Ngày sinh";
             // 
-            // textBox1
+            // tbID
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(80, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(139, 30);
-            this.textBox1.TabIndex = 1;
+            this.tbID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbID.Location = new System.Drawing.Point(80, 11);
+            this.tbID.Name = "tbID";
+            this.tbID.Size = new System.Drawing.Size(139, 30);
+            this.tbID.TabIndex = 1;
             // 
-            // textBox2
+            // tbName
             // 
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(345, 11);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(142, 30);
-            this.textBox2.TabIndex = 2;
+            this.tbName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbName.Location = new System.Drawing.Point(345, 11);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(142, 30);
+            this.tbName.TabIndex = 2;
             // 
-            // dateTimePicker1
+            // dtDateBirth
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(625, 11);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(152, 30);
-            this.dateTimePicker1.TabIndex = 3;
+            this.dtDateBirth.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtDateBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtDateBirth.Location = new System.Drawing.Point(625, 11);
+            this.dtDateBirth.Name = "dtDateBirth";
+            this.dtDateBirth.Size = new System.Drawing.Size(152, 30);
+            this.dtDateBirth.TabIndex = 3;
             // 
-            // checkBox1
+            // ckbGender
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(796, 13);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(145, 26);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "Giới tính Nam";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ckbGender.AutoSize = true;
+            this.ckbGender.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbGender.Location = new System.Drawing.Point(796, 13);
+            this.ckbGender.Name = "ckbGender";
+            this.ckbGender.Size = new System.Drawing.Size(145, 26);
+            this.ckbGender.TabIndex = 4;
+            this.ckbGender.Text = "Giới tính Nam";
+            this.ckbGender.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbDepartment
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(80, 56);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(139, 30);
-            this.comboBox1.TabIndex = 5;
+            this.cbDepartment.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbDepartment.FormattingEnabled = true;
+            this.cbDepartment.Location = new System.Drawing.Point(80, 56);
+            this.cbDepartment.Name = "cbDepartment";
+            this.cbDepartment.Size = new System.Drawing.Size(139, 30);
+            this.cbDepartment.TabIndex = 5;
             // 
-            // textBox3
+            // tbPlaceBirth
             // 
-            this.textBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(345, 56);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(586, 30);
-            this.textBox3.TabIndex = 6;
+            this.tbPlaceBirth.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPlaceBirth.Location = new System.Drawing.Point(345, 56);
+            this.tbPlaceBirth.Name = "tbPlaceBirth";
+            this.tbPlaceBirth.Size = new System.Drawing.Size(586, 30);
+            this.tbPlaceBirth.TabIndex = 6;
             // 
             // btnAdd
             // 
@@ -277,12 +277,12 @@ namespace Cau1
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbPlaceBirth);
+            this.Controls.Add(this.cbDepartment);
+            this.Controls.Add(this.ckbGender);
+            this.Controls.Add(this.dtDateBirth);
+            this.Controls.Add(this.tbName);
+            this.Controls.Add(this.tbID);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -304,12 +304,12 @@ namespace Cau1
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbID;
+        private System.Windows.Forms.TextBox tbName;
+        private System.Windows.Forms.DateTimePicker dtDateBirth;
+        private System.Windows.Forms.CheckBox ckbGender;
+        private System.Windows.Forms.ComboBox cbDepartment;
+        private System.Windows.Forms.TextBox tbPlaceBirth;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;

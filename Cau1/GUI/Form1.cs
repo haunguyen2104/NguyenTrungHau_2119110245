@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Cau1.BLL;
+using Cau1.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,8 @@ namespace Cau1
 {
     public partial class Employee : Form
     {
+        EmployeeBLL empBLL = new EmployeeBLL();
+        DepartmentBLL depBLL = new DepartmentBLL();
         public Employee()
         {
             InitializeComponent();
@@ -19,7 +23,22 @@ namespace Cau1
 
         private void Employee_Load(object sender, EventArgs e)
         {
-
+            List<EmployeeDTO> lstEmp = empBLL.ReadEmployee();
+            foreach(EmployeeDTO emp in lstEmp)
+            {
+                dataView.Rows.Add(emp.IdEmployee,
+                                                    emp.Name,
+                                                    emp.DateBirth,
+                                                    emp.Gender,
+                                                    emp.PlaceBirth,
+                                                    emp.DepartmentName);
+            }
+            List<DepartmentDTO> lstDep = depBLL.ReadDepartmentList();
+            foreach(DepartmentDTO dep in lstDep)
+            {
+                cbDepartment.Items.Add(dep);
+            }
+            cbDepartment.DisplayMember = "DepartmentName";
         }
 
         private void dataView_RowEnter(object sender, DataGridViewCellEventArgs e)
