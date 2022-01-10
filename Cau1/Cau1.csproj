@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="BLL\DepartmentBLL.cs" />
     <Compile Include="BLL\EmployeeBLL.cs" />
+    <Compile Include="DAO\DBConnection.cs" />
     <Compile Include="DAO\DepartmentDAO.cs" />
     <Compile Include="DAO\EmployeeDAO.cs" />
     <Compile Include="DTO\DepartmentDTO.cs" />
