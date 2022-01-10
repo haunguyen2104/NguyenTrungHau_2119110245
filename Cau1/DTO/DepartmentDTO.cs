@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cau1.DTO
 {
-    class DepartmentDTO
+    public class DepartmentDTO
     {
     }
 }
