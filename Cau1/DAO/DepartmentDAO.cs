@@ -22,7 +22,7 @@ namespace Cau1.DAO
             {
                 DepartmentDTO dep = new DepartmentDTO();
                 dep.IdDepartment = reader["IdDepartment"].ToString();
-                dep.Name = reader["Name"].ToString();
+                dep.NameDep = reader["NameDep"].ToString();
                 lstDepartment.Add(dep);
             }
             conn.Close();
@@ -39,7 +39,7 @@ namespace Cau1.DAO
             if(reader.HasRows && reader.Read())
             {
                 dep.IdDepartment = reader["IdDepartment"].ToString();
-                dep.Name = reader["Name"].ToString();
+                dep.NameDep = reader["NameDep"].ToString();
             }
             conn.Close();
             return dep;

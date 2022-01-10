@@ -9,7 +9,7 @@ namespace Cau1.DTO
     public class DepartmentDTO
     {
         public string IdDepartment { get; set; }
-        public string Name { get; set; }
+        public string NameDep { get; set; }
         public List<EmployeeDTO> Employees { get; set; }
     }
 }
