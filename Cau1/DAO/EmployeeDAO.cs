@@ -27,7 +27,7 @@ namespace Cau1.DAO
                 Employee.IdEmployee = int.Parse(reader["IdEmployee"].ToString());
                 Employee.Name = reader["Name"].ToString();
                 Employee.DateBirth = DateTime.Parse(reader["DateBirth"].ToString());
-                //Employee.Gender=int.Parse(reader["Gender"].ToString());
+               Employee.Gender = reader["Gender"].ToString();
                 Employee.PlaceBirth = reader["PlaceBirth"].ToString();
                 Employee.Departments = dep.ReadDepartment(reader["IdDepartment"].ToString());
 

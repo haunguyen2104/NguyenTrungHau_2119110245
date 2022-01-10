@@ -51,6 +51,7 @@ namespace Cau1
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,7 +99,7 @@ namespace Cau1
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(523, 15);
+            this.label5.Location = new System.Drawing.Point(583, 15);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 22);
             this.label5.TabIndex = 0;
@@ -117,14 +118,14 @@ namespace Cau1
             this.tbName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbName.Location = new System.Drawing.Point(345, 11);
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(142, 30);
+            this.tbName.Size = new System.Drawing.Size(232, 30);
             this.tbName.TabIndex = 2;
             // 
             // dtDateBirth
             // 
             this.dtDateBirth.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtDateBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtDateBirth.Location = new System.Drawing.Point(625, 11);
+            this.dtDateBirth.Location = new System.Drawing.Point(685, 11);
             this.dtDateBirth.Name = "dtDateBirth";
             this.dtDateBirth.Size = new System.Drawing.Size(152, 30);
             this.dtDateBirth.TabIndex = 3;
@@ -133,7 +134,7 @@ namespace Cau1
             // 
             this.ckbGender.AutoSize = true;
             this.ckbGender.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbGender.Location = new System.Drawing.Point(796, 13);
+            this.ckbGender.Location = new System.Drawing.Point(856, 13);
             this.ckbGender.Name = "ckbGender";
             this.ckbGender.Size = new System.Drawing.Size(145, 26);
             this.ckbGender.TabIndex = 4;
@@ -154,17 +155,17 @@ namespace Cau1
             this.tbPlaceBirth.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPlaceBirth.Location = new System.Drawing.Point(345, 56);
             this.tbPlaceBirth.Name = "tbPlaceBirth";
-            this.tbPlaceBirth.Size = new System.Drawing.Size(586, 30);
+            this.tbPlaceBirth.Size = new System.Drawing.Size(737, 30);
             this.tbPlaceBirth.TabIndex = 6;
             // 
             // btnAdd
             // 
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(402, 532);
+            this.btnAdd.Location = new System.Drawing.Point(406, 532);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(100, 40);
-            this.btnAdd.TabIndex = 7;
+            this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -173,10 +174,10 @@ namespace Cau1
             // 
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(545, 532);
+            this.btnDelete.Location = new System.Drawing.Point(547, 532);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 40);
-            this.btnDelete.TabIndex = 8;
+            this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -188,7 +189,7 @@ namespace Cau1
             this.btnEdit.Location = new System.Drawing.Point(688, 532);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(100, 40);
-            this.btnEdit.TabIndex = 9;
+            this.btnEdit.TabIndex = 10;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -197,10 +198,10 @@ namespace Cau1
             // 
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(831, 532);
+            this.btnExit.Location = new System.Drawing.Point(829, 532);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(100, 40);
-            this.btnExit.TabIndex = 10;
+            this.btnExit.TabIndex = 11;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -221,8 +222,8 @@ namespace Cau1
             this.dataView.RowHeadersWidth = 51;
             this.dataView.RowTemplate.Height = 24;
             this.dataView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataView.Size = new System.Drawing.Size(914, 387);
-            this.dataView.TabIndex = 11;
+            this.dataView.Size = new System.Drawing.Size(1065, 387);
+            this.dataView.TabIndex = 12;
             this.dataView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataView_RowEnter);
             // 
             // Column1
@@ -237,7 +238,7 @@ namespace Cau1
             this.Column2.HeaderText = "Name";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
-            this.Column2.Width = 250;
+            this.Column2.Width = 125;
             // 
             // Column3
             // 
@@ -267,11 +268,24 @@ namespace Cau1
             this.Column6.Name = "Column6";
             this.Column6.Width = 125;
             // 
+            // btnClear
+            // 
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClear.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(265, 532);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(108, 40);
+            this.btnClear.TabIndex = 7;
+            this.btnClear.Text = "Làm mới";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(943, 596);
+            this.ClientSize = new System.Drawing.Size(1099, 596);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.dataView);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnEdit);
@@ -321,6 +335,7 @@ namespace Cau1
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Button btnClear;
     }
 }
 
