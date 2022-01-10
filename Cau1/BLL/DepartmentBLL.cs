@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cau1.BLL
 {
-    class DepartmentBLL
+    public class DepartmentBLL
     {
     }
 }

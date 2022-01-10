@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cau1.DAO
 {
-    class EmployeeDAO
+    public class EmployeeDAO
     {
     }
 }
