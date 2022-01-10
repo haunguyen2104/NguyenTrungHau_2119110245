@@ -172,7 +172,7 @@ namespace Cau1
                 {
                     if (tbName.Text == "") { MessageBox.Show("Không được để trống Tên", "Thông báo"); }
                     else
-                    {
+                    { 
                         if (tbPlaceBirth.Text == "") { MessageBox.Show("Không được để trống Nơi sinh", "Thông báo"); }
                         else
                         {
