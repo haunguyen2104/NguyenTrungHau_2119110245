@@ -8,5 +8,18 @@ namespace Cau1.DTO
 {
     public class EmployeeDTO
     {
+        public int IdEmployee { get; set; }
+        public string Name { get; set; }
+        public DateTime DateBirth { get; set; }
+        public bool Gender { get; set; }
+        public string PlaceBirth { get; set; }
+        public DepartmentDTO Departments { get; set; }
+        public string DepartmentName
+        {
+            get
+            {
+                return Departments.Name;
+            }
+        }
     }
 }
