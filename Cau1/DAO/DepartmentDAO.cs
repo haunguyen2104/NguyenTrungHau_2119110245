@@ -12,7 +12,7 @@ namespace Cau1.DAO
     {
         public List<DepartmentDTO> ReadDepartmentList()
         {
-            SqlConnection conn = CreateConnection;
+            SqlConnection conn = CreateConnection();
             conn.Open();
             SqlCommand cmd = new SqlCommand("Select * from Department_2119110245", conn);
             SqlDataReader reader = cmd.ExecuteReader();
@@ -33,9 +33,7 @@ namespace Cau1.DAO
         {
             SqlConnection conn = CreateConnection();
             conn.Open();
-            SqlCommand cmd = new SqlCommand(
-                "select * from Department_2119110245 where IdDepartment" + IdDepartment.ToString(),
-                conn);
+            SqlCommand cmd = new SqlCommand( "select * from Department_2119110245 where IdDepartment = " +"'" +IdDepartment.ToString()+"'", conn);
             DepartmentDTO dep = new DepartmentDTO();
             SqlDataReader reader = cmd.ExecuteReader();
             if(reader.HasRows && reader.Read())
