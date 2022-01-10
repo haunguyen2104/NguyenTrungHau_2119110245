@@ -23,6 +23,8 @@ namespace Cau1
 
         private void Employee_Load(object sender, EventArgs e)
         {
+
+
             List<EmployeeDTO> lstEmp = empBLL.ReadEmployee();
             foreach (EmployeeDTO emp in lstEmp)
             {
@@ -64,6 +66,7 @@ namespace Cau1
                 tbPlaceBirth.Text = row.Cells[4].Value.ToString();
                 cbDepartment.Text = row.Cells[5].Value.ToString();
                 tbID.Enabled = false;
+                btnAdd.Enabled = false;
             }
         }
 
@@ -83,13 +86,42 @@ namespace Cau1
             }
             emp.PlaceBirth = tbPlaceBirth.Text;
             emp.Departments = (DepartmentDTO)cbDepartment.SelectedItem;
-            empBLL.NewEmployee(emp);
-            dataView.Rows.Add(emp.IdEmployee,
-                                                    emp.Name,
-                                                    emp.DateBirth,
-                                                    emp.Gender,
-                                                    emp.PlaceBirth,
-                                                    emp.DepartmentName);
+            
+            //Ràng buộc dữ liệu
+            if (tbID.Equals("")) { MessageBox.Show("ID không được để trống.","Thông báo"); }
+            else {
+                if (tbName.Equals("")) { MessageBox.Show("Tên không được để trống.", "Thông báo"); }
+                else {
+                    if (cbDepartment.Equals("")) { MessageBox.Show("Đơn vị không được để trống.", "Thông báo"); }
+                    else {
+                        if (tbPlaceBirth.Equals("")) { MessageBox.Show("Nơi sinh không được để trống.", "Thông báo"); }
+                        else {
+
+                                empBLL.NewEmployee(emp);
+                                dataView.Rows.Add(emp.IdEmployee,
+                                                                        emp.Name,
+                                                                        emp.DateBirth,
+                                                                        emp.Gender,
+                                                                        emp.PlaceBirth,
+                                                                        emp.DepartmentName);
+                                MessageBox.Show("Đã thêm nhân viên thành công.", "Thông báo");
+                                Clear();
+                            
+                        }
+                    }
+                }
+            }
+            //end ràng buộc
+        }
+
+        private void Clear()
+        {
+            tbID.Text = "";
+            tbName.Text = "";
+            dtDateBirth.Value = DateTime.Now;
+            ckbGender.Checked = false;
+            cbDepartment.Text = "";
+           tbPlaceBirth.Text = "";
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -127,14 +159,40 @@ namespace Cau1
                 emp.PlaceBirth = tbPlaceBirth.Text;
                 emp.Departments = (DepartmentDTO)cbDepartment.SelectedItem;
 
-                empBLL.EditEmployee(emp);
 
-                row.Cells[0].Value = emp.IdEmployee;
-                row.Cells[1].Value = emp.Name;
-                row.Cells[2].Value = emp.DateBirth;
-                row.Cells[3].Value = emp.Gender;
-                row.Cells[4].Value = emp.PlaceBirth;
-                row.Cells[5].Value = emp.DepartmentName;
+                //Ràng buộc dữ liệu
+                if (tbID.Equals("")) { MessageBox.Show("ID không được để trống.", "Thông báo"); }
+                else
+                {
+                    if (tbName.Equals("")) { MessageBox.Show("Tên không được để trống.", "Thông báo"); }
+                    else
+                    {
+                        if (cbDepartment.Equals("")) { MessageBox.Show("Đơn vị không được để trống.", "Thông báo"); }
+                        else
+                        {
+                            if (tbPlaceBirth.Equals("")) { MessageBox.Show("Nơi sinh không được để trống.", "Thông báo"); }
+                            else
+                            {
+                                var result = MessageBox.Show("Bạn có muốn cập nhật lại thông tin này? ", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                                if (result == DialogResult.OK)
+                                {
+                                    empBLL.EditEmployee(emp);
+
+                                    row.Cells[0].Value = emp.IdEmployee;
+                                    row.Cells[1].Value = emp.Name;
+                                    row.Cells[2].Value = emp.DateBirth;
+                                    row.Cells[3].Value = emp.Gender;
+                                    row.Cells[4].Value = emp.PlaceBirth;
+                                    row.Cells[5].Value = emp.DepartmentName;
+                                    MessageBox.Show("Cập nhật thành công..", "Thông báo");
+                                }
+                            }
+                        }
+                    }
+                }
+                //end ràng buộc
+
+                
 
             }
         }
@@ -147,9 +205,9 @@ namespace Cau1
                 this.Close();
             }
         }
-
         private void btnClear_Click(object sender, EventArgs e)
         {
+            btnAdd.Enabled = true;
             tbID.Enabled = true;
             tbID.Text = "";
             tbName.Text = "";
@@ -157,7 +215,8 @@ namespace Cau1
             ckbGender.Checked = false;
             cbDepartment.Text = "";
             tbPlaceBirth.Text = "";
-          
+
         }
+
     }
 }
