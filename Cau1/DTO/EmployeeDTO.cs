@@ -8,6 +8,7 @@ namespace Cau1.DTO
 {
     public class EmployeeDTO
     {
+        //Ánh xạ cơ sở dữ liệu từ bảng Employee_2119110245
         public int IdEmployee { get; set; }
         public string Name { get; set; }
         public DateTime DateBirth { get; set; }
@@ -15,7 +16,7 @@ namespace Cau1.DTO
         public string PlaceBirth { get; set; }
         public DepartmentDTO Departments { get; set; }
         public string DepartmentName
-        {
+        { 
             get
             {
                 return Departments.NameDep;
