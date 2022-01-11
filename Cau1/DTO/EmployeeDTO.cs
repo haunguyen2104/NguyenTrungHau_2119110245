@@ -8,7 +8,6 @@ namespace Cau1.DTO
 {
     public class EmployeeDTO
     {
-        //Ánh xạ cơ sở dữ liệu từ bảng Employee_2119110245
         public int IdEmployee { get; set; }
         public string Name { get; set; }
         public DateTime DateBirth { get; set; }
