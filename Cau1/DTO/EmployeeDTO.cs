@@ -15,7 +15,7 @@ namespace Cau1.DTO
         public string PlaceBirth { get; set; }
         public DepartmentDTO Departments { get; set; }
         public string DepartmentName
-        {
+        { 
             get
             {
                 return Departments.NameDep;
