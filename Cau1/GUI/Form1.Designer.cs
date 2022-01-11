@@ -278,7 +278,7 @@ namespace Cau1
             this.btnClear.TabIndex = 7;
             this.btnClear.Text = "Làm mới";
             this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click); 
             // 
             // Employee
             // 

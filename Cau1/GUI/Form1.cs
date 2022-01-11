@@ -88,13 +88,13 @@ namespace Cau1
             emp.Departments = (DepartmentDTO)cbDepartment.SelectedItem;
             
             //Ràng buộc dữ liệu
-            if (tbID.Equals("")) { MessageBox.Show("ID không được để trống.","Thông báo"); }
+            if (tbID.Text=="") { MessageBox.Show("ID không được để trống.","Thông báo"); }
             else {
-                if (tbName.Equals("")) { MessageBox.Show("Tên không được để trống.", "Thông báo"); }
+                if (tbName.Text == "") { MessageBox.Show("Tên không được để trống.", "Thông báo"); }
                 else {
-                    if (cbDepartment.Equals("")) { MessageBox.Show("Đơn vị không được để trống.", "Thông báo"); }
+                    if (cbDepartment.Text == "") { MessageBox.Show("Đơn vị không được để trống.", "Thông báo"); }
                     else {
-                        if (tbPlaceBirth.Equals("")) { MessageBox.Show("Nơi sinh không được để trống.", "Thông báo"); }
+                        if (tbPlaceBirth.Text == "") { MessageBox.Show("Nơi sinh không được để trống.", "Thông báo"); }
                         else {
 
                                 empBLL.NewEmployee(emp);
