@@ -79,7 +79,7 @@ namespace Cau1
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(251, 15);
+            this.label3.Location = new System.Drawing.Point(329, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 22);
             this.label3.TabIndex = 0;
@@ -89,7 +89,7 @@ namespace Cau1
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(251, 60);
+            this.label4.Location = new System.Drawing.Point(329, 60);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 22);
             this.label4.TabIndex = 0;
@@ -99,7 +99,7 @@ namespace Cau1
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(583, 15);
+            this.label5.Location = new System.Drawing.Point(661, 15);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 22);
             this.label5.TabIndex = 0;
@@ -110,22 +110,23 @@ namespace Cau1
             this.tbID.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbID.Location = new System.Drawing.Point(80, 11);
             this.tbID.Name = "tbID";
-            this.tbID.Size = new System.Drawing.Size(139, 30);
+            this.tbID.Size = new System.Drawing.Size(222, 30);
             this.tbID.TabIndex = 1;
             // 
             // tbName
             // 
             this.tbName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbName.Location = new System.Drawing.Point(345, 11);
+            this.tbName.Location = new System.Drawing.Point(423, 11);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(232, 30);
             this.tbName.TabIndex = 2;
             // 
             // dtDateBirth
             // 
+            this.dtDateBirth.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.dtDateBirth.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtDateBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtDateBirth.Location = new System.Drawing.Point(685, 11);
+            this.dtDateBirth.Location = new System.Drawing.Point(763, 11);
             this.dtDateBirth.Name = "dtDateBirth";
             this.dtDateBirth.Size = new System.Drawing.Size(152, 30);
             this.dtDateBirth.TabIndex = 3;
@@ -133,8 +134,9 @@ namespace Cau1
             // ckbGender
             // 
             this.ckbGender.AutoSize = true;
+            this.ckbGender.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ckbGender.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbGender.Location = new System.Drawing.Point(856, 13);
+            this.ckbGender.Location = new System.Drawing.Point(934, 13);
             this.ckbGender.Name = "ckbGender";
             this.ckbGender.Size = new System.Drawing.Size(145, 26);
             this.ckbGender.TabIndex = 4;
@@ -147,15 +149,15 @@ namespace Cau1
             this.cbDepartment.FormattingEnabled = true;
             this.cbDepartment.Location = new System.Drawing.Point(80, 56);
             this.cbDepartment.Name = "cbDepartment";
-            this.cbDepartment.Size = new System.Drawing.Size(139, 30);
+            this.cbDepartment.Size = new System.Drawing.Size(222, 30);
             this.cbDepartment.TabIndex = 5;
             // 
             // tbPlaceBirth
             // 
             this.tbPlaceBirth.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPlaceBirth.Location = new System.Drawing.Point(345, 56);
+            this.tbPlaceBirth.Location = new System.Drawing.Point(423, 56);
             this.tbPlaceBirth.Name = "tbPlaceBirth";
-            this.tbPlaceBirth.Size = new System.Drawing.Size(737, 30);
+            this.tbPlaceBirth.Size = new System.Drawing.Size(659, 30);
             this.tbPlaceBirth.TabIndex = 6;
             // 
             // btnAdd
@@ -278,7 +280,7 @@ namespace Cau1
             this.btnClear.TabIndex = 7;
             this.btnClear.Text = "Làm mới";
             this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click); 
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // Employee
             // 
@@ -302,6 +304,8 @@ namespace Cau1
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Employee";
             this.Text = "Nhân viên";
             this.Load += new System.EventHandler(this.Employee_Load);

@@ -129,17 +129,6 @@ namespace Cau1
                 }
             }
         }
-
-        private void Clear()
-        {
-            tbID.Text = "";
-            tbName.Text = "";
-            dtDateBirth.Value = DateTime.Now;
-            ckbGender.Checked = false;
-            cbDepartment.Text = "";
-            tbPlaceBirth.Text = "";
-        }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             EmployeeDTO emp = new EmployeeDTO();
@@ -177,23 +166,22 @@ namespace Cau1
 
 
                 //Ràng buộc dữ liệu
-                if (tbID.Equals("")) { MessageBox.Show("ID không được để trống.", "Thông báo"); }
+                if (tbID.Equals("")) { MessageBox.Show("ID không được để trống.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
                 else
                 {
-                    if (tbName.Equals("")) { MessageBox.Show("Tên không được để trống.", "Thông báo"); }
+                    if (tbName.Equals("")) { MessageBox.Show("Tên không được để trống.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
                     else
                     {
-                        if (cbDepartment.Equals("")) { MessageBox.Show("Đơn vị không được để trống.", "Thông báo"); }
+                        if (cbDepartment.Equals("")) { MessageBox.Show("Đơn vị không được để trống.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
                         else
                         {
-                            if (tbPlaceBirth.Equals("")) { MessageBox.Show("Nơi sinh không được để trống.", "Thông báo"); }
+                            if (tbPlaceBirth.Equals("")) { MessageBox.Show("Nơi sinh không được để trống.", "Cảnh báo",MessageBoxButtons.OK,MessageBoxIcon.Warning); }
                             else
                             {
                                 var result = MessageBox.Show("Bạn có muốn cập nhật lại thông tin này? ", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                                 if (result == DialogResult.OK)
                                 {
                                     empBLL.EditEmployee(emp);
-
                                     row.Cells[0].Value = emp.IdEmployee;
                                     row.Cells[1].Value = emp.Name;
                                     row.Cells[2].Value = emp.DateBirth;
@@ -207,12 +195,8 @@ namespace Cau1
                     }
                 }
                 //end ràng buộc
-
-
-
             }
         }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             var result = MessageBox.Show("Bạn có muốn đóng chương trình không ? ", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
@@ -232,6 +216,16 @@ namespace Cau1
             cbDepartment.Text = "";
             tbPlaceBirth.Text = "";
 
+        }
+
+        private void Clear()
+        {
+            tbID.Text = "";
+            tbName.Text = "";
+            dtDateBirth.Value = DateTime.Now;
+            ckbGender.Checked = false;
+            cbDepartment.Text = "";
+            tbPlaceBirth.Text = "";
         }
 
     }
