@@ -1,6 +1,7 @@
 ﻿using Cau1.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,8 @@ namespace Cau1.DAO
         {
             SqlConnection conn = CreateConnection();
             conn.Open();
-            SqlCommand cmd = new SqlCommand("Select * from Department_2119110245", conn);
+            SqlCommand cmd = new SqlCommand("GetAllDepartment", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
             SqlDataReader reader = cmd.ExecuteReader();
 
             List<DepartmentDTO> lstDepartment = new List<DepartmentDTO>();
