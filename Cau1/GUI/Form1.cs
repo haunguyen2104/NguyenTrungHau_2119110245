@@ -122,7 +122,10 @@ namespace Cau1
             }
             catch (Exception)
             {
-                if (tbID.Text.Length > 7) { MessageBox.Show("ID không được quá 7 ký tự.", "Thông báo"); }
+                if (tbID.Text.Length > 7) 
+                { 
+                    MessageBox.Show("ID không được quá 7 ký tự.", "Thông báo"); 
+                }
                 else
                 {
                     MessageBox.Show("ID đã tồn tại.", "Thông báo");
