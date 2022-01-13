@@ -124,6 +124,7 @@ namespace Cau1
             {
                 if (tbID.Text.Length > 7) 
                 { 
+                    //ràng buộc số ký tự
                     MessageBox.Show("ID không được quá 7 ký tự.", "Thông báo"); 
                 }
                 else
