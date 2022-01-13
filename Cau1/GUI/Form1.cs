@@ -134,7 +134,7 @@ namespace Cau1
             EmployeeDTO emp = new EmployeeDTO();
             emp.IdEmployee = int.Parse(tbID.Text);
 
-            var result = MessageBox.Show("Bạn có  chắc chắn muốn xóa nhân viên này không? ", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            var result = MessageBox.Show("Bạn có muốn Xóa dữ liệu không? ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.OK)
             {
                 empBLL.DeleteEmployee(emp);
@@ -199,7 +199,7 @@ namespace Cau1
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
-            var result = MessageBox.Show("Bạn có muốn đóng chương trình không ? ", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            var result = MessageBox.Show("Bạn có muốn đóng chương trình không ? ", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.OK)
             {
                 this.Close();
@@ -209,12 +209,7 @@ namespace Cau1
         {
             btnAdd.Enabled = true;
             tbID.Enabled = true;
-            tbID.Text = "";
-            tbName.Text = "";
-            dtDateBirth.Value = DateTime.Now;
-            ckbGender.Checked = false;
-            cbDepartment.Text = "";
-            tbPlaceBirth.Text = "";
+            Clear();
 
         }
 
