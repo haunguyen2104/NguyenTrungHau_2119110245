@@ -11,6 +11,7 @@ namespace Cau1.DAO
 {
     public class DepartmentDAO : DBConnection
     {
+        //Kết nối database để lấy ra một danh sách Department
         public List<DepartmentDTO> ReadDepartmentList()
         {
             SqlConnection conn = CreateConnection();
@@ -31,6 +32,7 @@ namespace Cau1.DAO
             return lstDepartment;
         }
 
+        //Kết nối database để lấy 1 department theo IdDepartment
         public DepartmentDTO ReadDepartment(string IdDepartment)
         {
             SqlConnection conn = CreateConnection();
