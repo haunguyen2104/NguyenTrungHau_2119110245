@@ -47,6 +47,7 @@ namespace Cau1
 
         private void dataView_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
+            // Lấy dữ liệu từ DataGridView lên các textBox, checkBox, comboBox và dateTimePicker
             int index = e.RowIndex;
             DataGridViewRow row = dataView.Rows[index];
             if (row.Cells[0].Value != null)
@@ -54,7 +55,6 @@ namespace Cau1
                 tbID.Text = row.Cells[0].Value.ToString();
                 tbName.Text = row.Cells[1].Value.ToString();
                 dtDateBirth.Text = row.Cells[2].Value.ToString();
-                //ckbGender.Text = row.Cells[3].Value.ToString();
                 if (row.Cells[3].Value.ToString() != "Nam")
                 {
                     ckbGender.Checked = false;
@@ -122,7 +122,11 @@ namespace Cau1
             }
             catch (Exception)
             {
-                if (tbID.Text.Length > 7) { MessageBox.Show("ID không được quá 7 ký tự.", "Thông báo"); }
+                if (tbID.Text.Length > 7) 
+                { 
+                    //ràng buộc số ký tự
+                    MessageBox.Show("ID không được quá 7 ký tự.", "Thông báo"); 
+                }
                 else
                 {
                     MessageBox.Show("ID đã tồn tại.", "Thông báo");
