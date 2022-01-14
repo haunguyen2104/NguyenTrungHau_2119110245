@@ -11,6 +11,7 @@ namespace Cau1.DAO
 {
     public class EmployeeDAO:DBConnection
     {
+        //Kết nối database để Lấy nhân viên
         public List<EmployeeDTO> ReadEmployee()
         {
             SqlConnection conn = CreateConnection();
@@ -37,6 +38,7 @@ namespace Cau1.DAO
             return lstEmployee;
         }
 
+        //Kết nối database để Thêm nhân viên
         public void NewEmployee(EmployeeDTO emp)
         {
             SqlConnection conn = CreateConnection();
@@ -53,6 +55,7 @@ namespace Cau1.DAO
             conn.Close();
         }
 
+        //Kết nối database để Cập nhật nhân viên
         public void EditEmployee(EmployeeDTO emp)
         {
             SqlConnection conn = CreateConnection();
@@ -69,6 +72,7 @@ namespace Cau1.DAO
             conn.Close();
         }
 
+        //Kết nối database để Xóa nhân viên
         public void DeleteEmployee(EmployeeDTO emp)
         {
             SqlConnection conn = CreateConnection();
