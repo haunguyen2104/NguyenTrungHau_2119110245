@@ -13,7 +13,7 @@ namespace Cau1.DAO
         public SqlConnection CreateConnection()
         {
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = @"Data Source = DESKTOP-7FIQ32C\SQLEXPRESS; Initial Catalog=HR; User Id=sa;Password=sa";
+            conn.ConnectionString = @"Data Source = DESKTOP-VSKS0JU\SQLEXPRESS; Initial Catalog=HR; User Id=sa;Password=sa";
             return conn;
         }
     }

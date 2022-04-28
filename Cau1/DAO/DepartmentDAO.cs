@@ -16,8 +16,8 @@ namespace Cau1.DAO
         {
             SqlConnection conn = CreateConnection();
             conn.Open();
-            SqlCommand cmd = new SqlCommand("GetAllDepartment", conn);
-            cmd.CommandType = CommandType.StoredProcedure;
+            SqlCommand cmd = new SqlCommand("select * from Department_2119110245", conn);
+            //cmd.CommandType = CommandType.StoredProcedure;
             SqlDataReader reader = cmd.ExecuteReader();
 
             List<DepartmentDTO> lstDepartment = new List<DepartmentDTO>();
